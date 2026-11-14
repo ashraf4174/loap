@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microfinance Loan Application</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">💰</div>
+            <div>
+                <h1>AfriLoan</h1>
+                <p>Microfinance Services</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#application">Loan Application</a>
+            <a href="#get-form">GET Method</a>
+            <a href="#post-form">POST Method</a>
+            <a href="#comparison">Comparison</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">ONLINE LOAN APPLICATION</span>
+
+            <h2>Apply for a Loan<br>
+                <span>Quickly & Securely</span>
+            </h2>
+
+            <p>
+                Complete the application form below to request a microfinance
+                loan. Please provide accurate information and upload your
+                supporting documents.
+            </p>
+
+            <a href="#application" class="hero-button">
+                Start Application →
+            </a>
+        </div>
+
+        <div class="hero-card">
+            <div class="money-icon">💵</div>
+            <h3>Simple & Fast</h3>
+            <p>Submit your loan application online from anywhere.</p>
+
+            <div class="stats">
+                <div>
+                    <strong>24/7</strong>
+                    <small>Applications</small>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <small>Online</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUESTION 1 -->
+    <section id="application" class="section">
+
+        <div class="section-title">
+            <span>QUESTION 1 — 10 MARKS</span>
+            <h2>Microfinance Loan Application</h2>
+            <p>
+                Fill in the required information below. Fields marked with
+                <b>*</b> are required.
+            </p>
+        </div>
+
+        <div class="form-container">
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3>👤 Personal Information</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="name">
+                                Applicant Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="applicant_name"
+                                placeholder="Enter your full name"
+                                required
+                                minlength="3"
+                                maxlength="100"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id">
+                                National ID Number <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="id"
+                                name="national_id"
+                                placeholder="e.g. 12345678"
+                                required
+                                pattern="[0-9]{7,9}"
+                                title="Enter a valid National ID number"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                Phone Number <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="e.g. 0712345678"
+                                required
+                                pattern="[0-9]{10}"
+                                title="Enter a valid 10-digit phone number"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@email.com"
+                                required
+                            >
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Employment Information -->
+                <div class="form-section">
+                    <h3>💼 Employment & Loan Details</h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="employment">
+                                Employment Status <span>*</span>
+                            </label>
+
+                            <select
+                                id="employment"
+                                name="employment_status"
+                                required
+                            >
+                                <option value="">-- Select Status --</option>
+                                <option value="employed">Employed</option>
+                                <option value="self-employed">
+                                    Self Employed
+                                </option>
+                                <option value="business-owner">
+                                    Business Owner
+                                </option>
+                                <option value="unemployed">
+                                    Unemployed
+                                </option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan">
+                                Loan Amount (KES) <span>*</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="loan"
+                                name="loan_amount"
+                                placeholder="Enter amount"
+                                min="1000"
+                                max="1000000"
+                                step="100"
+                                required
+                            >
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Documents -->
+                <div class="form-section">
+
+                    <h3>📄 Supporting Documents</h3>
+
+                    <div class="upload-box">
+
+                        <label for="documents">
+                            Upload Supporting Documents <span>*</span>
+                        </label>
+
+                        <p>
+                            Upload PDF, JPG or PNG files.
+                            Maximum file size: 5MB.
+                        </p>
+
+                        <input
+                            type="file"
+                            id="documents"
+                            name="supporting_documents"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <!-- Terms -->
+                <div class="terms">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I confirm that the information provided is accurate
+                        and complete.
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Submit Loan Application →
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- QUESTION 2 -->
+    <section class="section question-two">
+
+        <div class="section-title">
+            <span>QUESTION 2 — 10 MARKS</span>
+            <h2>GET and POST Methods</h2>
+            <p>
+                The following examples demonstrate how HTML forms submit data
+                using GET and POST.
+            </p>
+        </div>
+
+
+        <!-- GET FORM -->
+        <div id="get-form" class="method-card">
+
+            <div class="method-header get-header">
+                <div class="method-icon">GET</div>
+
+                <div>
+                    <h3>Form Using GET Method</h3>
+                    <p>Data is appended to the URL.</p>
+                </div>
+            </div>
+
+            <form action="process.html" method="get" class="demo-form">
+
+                <div class="form-group">
+                    <label for="get-name">Applicant Name</label>
+
+                    <input
+                        type="text"
+                        id="get-name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="get-email">Email</label>
+
+                    <input
+                        type="email"
+                        id="get-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="get-button">
+                    Submit Using GET
+                </button>
+
+            </form>
+
+            <div class="code-example">
+                <code>
+                    &lt;form action="process.html" method="get"&gt;
+                    <br>
+                    &nbsp;&nbsp;...
+                    <br>
+                    &lt;/form&gt;
+                </code>
+            </div>
+
+        </div>
+
+
+        <!-- POST FORM -->
+        <div id="post-form" class="method-card">
+
+            <div class="method-header post-header">
+                <div class="method-icon">POST</div>
+
+                <div>
+                    <h3>Form Using POST Method</h3>
+                    <p>Data is sent inside the HTTP request body.</p>
+                </div>
+            </div>
+
+            <form action="process.html" method="post" class="demo-form">
+
+                <div class="form-group">
+                    <label for="post-name">Applicant Name</label>
+
+                    <input
+                        type="text"
+                        id="post-name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="post-email">Email</label>
+
+                    <input
+                        type="email"
+                        id="post-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="post-button">
+                    Submit Using POST
+                </button>
+
+            </form>
+
+            <div class="code-example">
+                <code>
+                    &lt;form action="process.html" method="post"&gt;
+                    <br>
+                    &nbsp;&nbsp;...
+                    <br>
+                    &lt;/form&gt;
+                </code>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPARISON -->
+    <section id="comparison" class="comparison-section">
+
+        <div class="section-title light">
+            <span>QUESTION 2(c)</span>
+            <h2>GET vs POST</h2>
+            <p>
+                Differences between the two HTTP form submission methods.
+            </p>
+        </div>
+
+        <div class="comparison-table">
+
+            <div class="table-row table-heading">
+                <div>Feature</div>
+                <div>GET</div>
+                <div>POST</div>
+            </div>
+
+            <div class="table-row">
+                <div>URL</div>
+
+                <div>
+                    Data is visible in the URL.
+                    <br>
+                    <strong>Example:</strong>
+                    <br>
+                    process.html?name=John&email=john@email.com
+                </div>
+
+                <div>
+                    Data is not appended to the URL.
+                    It is sent in the request body.
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div>Security</div>
+
+                <div>
+                    Less suitable for sensitive information because
+                    data appears in the URL.
+                </div>
+
+                <div>
+                    Better for sensitive form data because values
+                    are not displayed in the URL.
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div>Data Size</div>
+
+                <div>
+                    Limited because data is included in the URL.
+                </div>
+
+                <div>
+                    Can handle larger amounts of data.
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div>Typical Use</div>
+
+                <div>
+                    Searching, filtering and retrieving information.
+                </div>
+
+                <div>
+                    Login forms, registration, loan applications
+                    and submitting data.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            💰 AfriLoan
+        </div>
+
+        <p>
+            © 2026 AfriLoan Microfinance Services
+        </p>
+
+        <p>
+            Web Design & Development — CAT 1
+        </p>
+
+    </footer>
+
+</body>
+</html>
